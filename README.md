@@ -1,3 +1,3 @@
 # liri-node-app
 
-<img src="/assets/liri.jpg">
+<img src="/assets/lir.jpg">
