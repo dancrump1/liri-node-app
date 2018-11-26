@@ -1,5 +1,4 @@
 # liri-node-app
 
 Here is the start, user input, and results of utilizing LIRI.js
-</n>
-<img src='assets/lir.png'>
+![Image of LIRI](https://gitub.com/dancrump1/liri-node-app/blob/master/assets/lir.jpg)
