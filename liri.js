@@ -2,7 +2,7 @@ require("dotenv").config();
 var inquirer = require('inquirer');
 
 
-var userInput;
+var userInput = "21 Guns";
 var userCommand;
 
 var request = require('request');
@@ -18,6 +18,7 @@ inquirer.prompt([{
         userCommand = inquirerResponse.choice;
 
         switch (userCommand) {
+            // Start of Spotify command
             case 'spotify-this-song':
                 console.log("running");
                 inquirer.prompt([{
@@ -32,11 +33,8 @@ inquirer.prompt([{
                         const keys = require('./keys');
                         console.log(userInput);
                         keys.spotify
-                            .search(userInput, {
-                                type: 'track',
-                                query: userInput,
-                                limit: '1'
-                            })
+                            .search({
+                                type: 'track', query: '21', limit: '1'})
                             .then(function (response) {
                                 console.log(`The artist's name is: ${response.tracks.items[0].artists[0].name}${"\n"}The songs title is: ${response.tracks.items[0].name}${"\n"}The link to the song is: ${response.tracks.items[0].external_urls.spotify}${"\n"}The album name is: ${response.tracks.items[0].album.name}`);
                             })
@@ -47,32 +45,12 @@ inquirer.prompt([{
                     })
 
                 break;
+                // End of Spotify command
+
+                // Start of other command
             case 'do-what-it-says':
                 console.log("running 2");
                 break;
+                // End of other command
         }
     });
-
-
-
-
-
-// if (userCommand === 'concert-this'){
-//     console.log("test one "+userInput);
-
-// }
-// else if (userCommand == 'spotify-this-song'){
-//     var userInput = process.argv[3];
-
-
-// }
-// else if (userCommand == 'movie-this'){
-//     var userInput = process.argv[3];
-//     console.log("test three "+userInput);
-
-// }
-// else if (userCommand == 'do-what-it-says'){
-//     var userInput = process.argv[3];
-//     console.log("test four "+userInput);
-
-// }
