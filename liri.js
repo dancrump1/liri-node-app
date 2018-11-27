@@ -1,8 +1,7 @@
 require("dotenv").config();
 var inquirer = require('inquirer');
 
-
-var userInput = "21 Guns";
+const spotify = require('./keys').spotify;
 var userCommand;
 
 var request = require('request');
@@ -30,18 +29,23 @@ inquirer.prompt([{
                     ])
                     .then(function (inquirerResponse) {
                         userInput = inquirerResponse.search;
-                        const keys = require('./keys');
+
                         console.log(userInput);
-                        keys.spotify
-                            .search({
-                                type: 'track', query: '21', limit: '1'})
-                            .then(function (response) {
-                                console.log(`The artist's name is: ${response.tracks.items[0].artists[0].name}${"\n"}The songs title is: ${response.tracks.items[0].name}${"\n"}The link to the song is: ${response.tracks.items[0].external_urls.spotify}${"\n"}The album name is: ${response.tracks.items[0].album.name}`);
-                            })
-                            .catch(function (err) {
-                                console.log(err);
-                                console.log("error")
-                            });
+                        spotify
+                        .search({
+                          type: 'track',
+                          query: userInput,
+                          limit: '1'
+                        })
+                        .then(function (response) {
+                          console.log(`The artist's name is: ${response.tracks.items[0].artists[0].name}${"\n"}The songs title is: ${response.tracks.items[0].name}${"\n"}The link to the song is: ${response.tracks.items[0].external_urls.spotify}${"\n"}The album name is: ${response.tracks.items[0].album.name}`);
+                        })
+                        .catch(function (err) {
+                          console.log(err);
+                          console.log("error")
+                        });
+                      
+
                     })
 
                 break;
