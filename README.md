@@ -13,5 +13,13 @@ Simply type in the name of a song, hit enter, and LIRI will return the informati
 
 
 ![Image of LIRI](https://github.com/dancrump1/liri-node-app/blob/master/assets/liri.JPG)
+
+Here is the second function, however, more logic needs to be added
+
+Start:
+
 ![Image of LIRI](https://github.com/dancrump1/liri-node-app/blob/master/assets/liri-start.JPG)
+
+End Result:
+
 ![Image of LIRI](https://github.com/dancrump1/liri-node-app/blob/master/assets/liri-spotify.JPG)
