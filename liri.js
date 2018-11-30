@@ -7,6 +7,8 @@ var userCommand;
 var request = require('request');
 var fs = require('fs');
 
+
+
 inquirer.prompt([{
         type: "list",
         message: "What would you like to do?",
@@ -28,6 +30,7 @@ inquirer.prompt([{
 
                     ])
                     .then(function (inquirerResponse) {
+                        
                         userInput = inquirerResponse.search;
 
                         console.log(userInput);
