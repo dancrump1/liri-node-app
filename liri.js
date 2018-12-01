@@ -21,7 +21,7 @@ inquirer.prompt([{
         switch (userCommand) {
             // Start of Spotify command
             case 'spotify-this-song':
-                console.log("running");
+                console.log("You've selected Spotify...");
                 inquirer.prompt([{
                             type: "input",
                             message: "What song would you like to search for?",
@@ -56,7 +56,8 @@ inquirer.prompt([{
 
                 // Start of other command
             case 'do-what-it-says':
-                console.log("running 2");
+                console.log("running 2")
+                console.log("Under Development");
                 break;
                 // End of other command
         }
