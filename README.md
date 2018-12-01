@@ -11,11 +11,6 @@ or
 Selecting the first option will then result in Inquirer prompting you for a song to search for.  
 Simply type in the name of a song, hit enter, and LIRI will return the information about that song.
 
-
-![Image of LIRI](https://github.com/dancrump1/liri-node-app/blob/master/assets/liri.JPG)
-
-Here is the second function, however, more logic needs to be added
-
 Start:
 
 ![Image of LIRI](https://github.com/dancrump1/liri-node-app/blob/master/assets/liri-start.JPG)
@@ -23,3 +18,14 @@ Start:
 End Result:
 
 ![Image of LIRI](https://github.com/dancrump1/liri-node-app/blob/master/assets/liri-spotify.JPG)
+
+Here is the second function, however, more logic needs to be added
+
+![Image of LIRI](https://github.com/dancrump1/liri-node-app/blob/master/assets/liri.JPG)
+
+
+
+
+
+
+
